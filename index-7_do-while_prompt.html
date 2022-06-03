@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let multiplyNumbers = (firstNumber, secondNumber) => firstNumber * secondNumber;
+        let addNumbers = (firstNumber, secondNumber) => firstNumber + secondNumber;
+        let divideNumbers = (firstNumber, secondNumber) => firstNumber / secondNumber;
+        let subtractNumbers = (firstNumber, secondNumber) => firstNumber - secondNumber;
+
+        function calculateNumbers () {
+
+            let firstNumber, secondNumber;
+            
+            do {
+                firstNumber = +prompt("Первое число?", 0);
+            } while (isNaN(firstNumber)); 
+
+            do {
+                secondNumber = +prompt("Второе число?", 0);
+            } while (isNaN(secondNumber));
+
+            let operator = prompt ("Оператор?");
+
+            switch(operator) {
+                case "+": 
+                    alert(addNumbers(firstNumber, secondNumber));
+                    break;
+                case "-": 
+                    alert(subtractNumbers(firstNumber, secondNumber));
+                    break;
+                case "*": 
+                    alert(multiplyNumbers(firstNumber, secondNumber));
+                    break;
+                case "/": 
+                    alert(divideNumbers(firstNumber, secondNumber)); 
+                    break;
+                default:    
+                    alert ("not a valid operator");
+            } 
+    
+        }
+
+        calculateNumbers()
+        
+    </script>
+
+</body>
+</html>
